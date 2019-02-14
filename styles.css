@@ -27,4 +27,10 @@ body{
     padding: 15px;
     margin:15px;
 }
-
+.menuMount{
+    display: inline-block;
+    width:10%;
+}
+#mount-calendar{
+    text-align: center;
+}

@@ -13,18 +13,25 @@ var domC = {
         this.get(id).remove();
     },
 
-    // 4c. Adding text to element by id 
+    // 4c. Adding text to element BY ID , NEW + OLD TEXT
      text: function(id, text) {
          var innerElement = this.get(id);
          var textNode = document.createTextNode(text);
          innerElement.appendChild(textNode);
      },
-
+    // Adding text to element SELECTED , NEW + OLD TEXT
     textIn: function(existingEl, text) {
         var textNode1 = document.createTextNode(text);
         existingEl.appendChild(textNode1);
     },
-
+    // Adding text to element BY ID , NEW TEXT
+    textNew: function(elemId,text){
+        this.get(elemId).innerHTML = text;
+    },
+    // Adding text to element SELECTED , NEW TEXT 
+    textInNew:function(existingEl,text){
+        existingEl.innerHTML = text;
+    },
     // 2. Adding a non-existing element to an existing one 
     addIn: function(newElType,existingElementID,newElInnerHTML){
         
@@ -107,15 +114,30 @@ var domC = {
         return this;
     },
 
-    // 4b. ?
+    // 4b. 
 
-    // 5d gets child el array
+    // 5d. Gets child el array BY ID
     getChildElement: function(parElId){
         var parEl = document.getElementById(parElId);
         var chNodes = parEl.childNodes;
         return chNodes;
-    }
-
+    },
+    // 5d. Gets child el array by EL
+    getChildElements: function(parEl){
+        return parEl.childNodes;
+    },
+    // 5a. Gets parent element by child el
+    getParentElement: function(childEl){
+        return childEl.parentElement;
+    },
+    // 5b. Gets Sibling Element Pervious
+    getSiblingElementUp: function(elementGetPerviousSibling){
+        return elementGetPerviousSibling.previousSibling;
+    },
+    // 5c. Gets Sibling Element Next
+    getSiblingElementDown: function(elementGetNextSibling){
+        return elementGetNextSibling.nextSibling;
+    },
 
 };
 

@@ -1,0 +1,30 @@
+table,
+th,
+td,
+tr,
+tbody {
+    border: 1px solid black;
+}
+
+td {
+    border-collapse:collapse;
+    padding: 35px;
+    margin:35px;
+    background-color: white;
+    
+}
+#calendar-main{
+    border-collapse:collapse;  
+}
+body{
+    background-color: lightblue;
+}
+#calendar-container{
+    border: 2px solid black;
+    
+}
+#calendar-main{
+    padding: 15px;
+    margin:15px;
+}
+
